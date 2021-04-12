@@ -1,0 +1,51 @@
+pip freeze > requirements.txt
+
+conda upgrade conda
+conda upgrade --all
+conda install PACKAGE_NAME
+conda install numpy=1.10.
+conda remove PACKAGE_NAME
+conda update package_name
+conda update --all
+conda search *SEARCH_TERM*
+
+conda search '*beautifulsoup*' [to eapand the wildcard]
+
+conda create -n env_name [python=X.X] [LIST_OF_PACKAGES]
+
+conda list
+
+conda env export [to share env so that other use your code with same library version]
+
+conda env export > environment.yaml
+
+conda env create -f environment.yaml[To create an environment from an environment file]
+
+conda env list
+conda info --envs
+
+# If the environment is not activated
+conda list -n env_name
+
+# If the environment is activated
+conda list
+
+# To see if a specific package, say `scipy` is installed in an environment
+conda list -n env_name scipy
+
+conda env remove -n env_name
+
+pip install -r requirements.txt
+==================================================================================================================
+
+jupyter notebook
+
+If you start another server, it'll try to use port 8888, but since it is occupied, the new server will run on port 8889. 
+Then, you'd connect to it at http://localhost:8889. Every additional notebook server will increment the port number like this
+
+
+jupyter nbconvert --to FORMAT mynotebook.ipynb
+
+# Install the package below, if not already
+pip install nbconvert
+jupyter nbconvert --to html mynotebook.ipynb
